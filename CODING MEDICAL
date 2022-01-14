@@ -1,0 +1,220 @@
+package assignment1;
+
+import java.util.Scanner;
+
+public class Assignment2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner input = new Scanner(System.in);
+		
+		String name;
+		String gender;
+		double uumtouch;
+		String email;
+		int phone;
+		int code1;
+		int age;
+		String bloodtype;
+		String condition;
+		String xray;
+		double xrayser=1;
+		double bloodtest=1;
+		double checkup;
+		double service = 5;
+		double panadol = 10;
+		double antibiotics = 8;
+		double med1, totalmed1;
+		double med2, totalmed2;
+		double totalpayment;
+		double balance;
+		double weight;
+		double height;
+		double bmi;
+		double diet=5;
+		int selection;
+		double temp;
+		double fever;
+		double cash;
+		int intake;
+		double total = 0;
+		
+		System.out.println("------------------------Welcome to the MEDICAL UUM------------------------");
+		System.out.println("-------------------------WE SHARE WE CARE WE LOVE-------------------------");
+		
+		
+		System.out.println("A reminder to all the patient to fill up the all the information");
+		
+		System.out.println("Patient 1");
+		System.out.print("Name : ");
+		name = input.nextLine();
+		System.out.print("Age : ");
+		age = input.nextInt();
+		System.out.print("Gender : ");
+		gender = input.next();
+		System.out.print("Personal e-mail : ");
+		email = input.next();
+		System.out.print("Phone number : ");
+		phone = input.nextInt();
+		System.out.println("Remind that if you are first patient please use the code of 8809");
+		System.out.print("Code : ");
+		code1 = input.nextInt();
+		System.out.println("\n");
+		
+		
+		
+		System.out.println("--------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println("Details that must be filled by the doctors below");
+		System.out.print("Blood Type : ");
+		bloodtype = input.next();
+		System.out.print("Condition of heart rate : ");
+		condition = input.next();
+		System.out.print("X-ray details : ");
+		xray = input.next();
+		System.out.print("Temperature : ");
+		temp = input.nextDouble();
+		System.out.print("Enter weight in Kilogram: ");
+		weight = input.nextDouble();
+		System.out.print("Enter your height in Meter: ");
+		height = input.nextDouble();
+		bmi = weight/(height*height);
+		System.out.printf("The BMI for this patient is : %.2f ",bmi);
+		System.out.print("\n");
+		
+		if (temp > 37) {
+		System.out.println("Insert the INTAKE medication needed by the patients below");
+		System.out.print("Packs of panadol : ");
+		med1 = input.nextDouble();
+		totalmed1 = med1*panadol;
+		System.out.print("Packs needed of antibiotics : ");
+		med2 = input.nextDouble();
+		totalmed2 = med2*antibiotics;
+        System.out.println("\n");
+        fever = totalmed1 + totalmed2;
+		}
+		else 
+			fever = 0;
+		
+        checkup = bloodtest+xrayser;
+		
+		System.out.println("--------------------------------------------------------------------------------------------------------------------------------------------");
+		
+		
+        System.out.println("These are the charges of the medications and services");
+		
+        System.out.println("[ SERVICE OF MEDICAL CHECKUP : RM "+service+"]"); 
+        System.out.println("[ PANADOL : RM "+panadol+"]");
+        System.out.println("[ ANTIBIOTICS : RM "+antibiotics+"]");
+        System.out.println("[ BLOOD TEST AND XRAY SCAN : RM" +checkup+"]");
+        System.out.println("[DIETICIAN SERVICES : RM" + diet+"]" );
+        
+        System.out.println("--------------------------------------------------------------------------------------------------------------------------------------------");
+        
+        System.out.println("These are the charts of the body mass index you have");
+        System.out.println("If your BMI is less than 18.5 : UNDERWEIGHT ");
+        System.out.println("If your BMI is more than equal 18.5 and less than 24.9 : NORMAL ");
+        System.out.println("If your BMI is less than 30  : OVERWEIGHT ");
+        System.out.println("If your BMI is more than 30 : OBESE ");
+        
+        System.out.println("--------------------------------------------------------------------------------------------------------------------------------------------");
+		
+		if (bmi > 30) {
+			System.out.println("                           This is the table for a day routine food intake        ");
+			System.out.println("==================================================================================================================");
+			System.out.println("= BREAKFAST ------> 3 egg whites + 1 toasted brown bread + 1/2 cup low fat milk (no sugar)                                                                                                   ");
+			System.out.println("= TUESDAY   ------> 1 cup papaya                                                                                               ");
+			System.out.println("= WEDNESDAY ------> 1 cup arhar dal + 1 chapatti + 1/2 cup low fat curd + salad                                                                                               ");
+			System.out.println("= THURSDAY  ------> 1 cup vegetable soup                                                                                               ");
+			System.out.println("= FRIDAY    ------> 1 cup pumpkin + 1 chapatti + salad                                                                                                ");
+			System.out.println("==================================================================================================================");
+		}
+				
+		else
+		{
+			for(int i = 1; i<= 7; i++)
+         {
+				System.out.print("Enter your kilocalories (kcal) intake in a week : ");
+				double total1 = input.nextDouble();
+				total = total + total1;
+				
+         }
+			System.out.println("Your total kcal are " +total);
+			}
+		
+        System.out.println("--------------------------------------------------------------------------------------------------------------------------------------------");
+
+		System.out.println("\n");
+		
+		System.out.print("Do you have UUMONETOUCH APPLICATION for the payment?");
+		System.out.print("Please enter 1 for yes and 2 for no : ");
+		selection = input.nextInt();
+		
+		totalpayment = (fever +service+checkup+diet);
+	
+		if (selection == 1) {
+			System.out.println("You will get a 50% off with UUMONETOUCH :) ");
+			System.out.println("Please enter your UUMONETOUCH balance : ");
+			uumtouch = input.nextDouble();
+			balance = uumtouch - (totalpayment/2);
+			System.out.printf("Your total for medical check-up for today : RM %.2f ",totalpayment/2);
+			System.out.println("\n");
+			System.out.printf("Balance of your payment : RM %.2f " ,balance);
+			System.out.println("\n");
+			
+		}
+		else if (selection == 2) {
+			System.out.println("The payment will deducted on your card/cash ");
+			System.out.println("Enter how much money to pay : ");
+			cash = input.nextDouble();
+			balance = cash - totalpayment;
+			System.out.printf("Your total for medical check-up for today : RM %.2f ",totalpayment);
+			System.out.println("\n");
+			System.out.printf("Balance of your payment : RM %.2f " ,balance);
+			System.out.println("\n");
+		}
+		else
+		{
+			System.out.println("System unable to proceed with the payment. Please retry again");
+		}
+			
+		System.out.println("Enter your your code : ");
+	       code1 = input.nextInt();
+	       
+	     for ( int i = 8809; i <= 8809; i++)
+	     {
+        
+        if(code1==8809) {
+    		System.out.println("--------------------------------------------------------------------------------------------------------------------------------------------");
+    		System.out.println("Details of the patient below");
+    		System.out.println("Full name : "+name);
+    		System.out.println("Current age : "+age);
+    		System.out.println("Gender : "+gender);
+    		System.out.println("Personal E-mail : "+email);
+    		System.out.println("Current phone number : "+phone);
+    		System.out.println("Code : " + code1);
+    		System.out.println("Blood Type : "+bloodtype);
+    		System.out.println("Condition of heart rate : "+condition);
+    		System.out.println("X-ray details : "+xray);
+    		System.out.printf("BMI : %.2f ",bmi);
+    		System.out.println("\n");
+    	i=i+1;
+        }
+        
+        
+        else
+        {
+          System.out.println("YOUR ACCESS TO YOUR HEALTH CARE IS DENIED. Please check again your code");
+          System.out.println("Please re-enter your code : ");
+         code1 = input.nextInt();
+         i = i -1;
+            
+        }
+  }
+	    System.out.print("\n");
+		System.out.println("--------------------------------------------------------------------------------------------------------------------------------------------");  
+    
+
+	}
+
+}
