@@ -1,0 +1,81 @@
+Welcome to the University Library Management System.
+Please enter your personal information to proceed to borrow a book.
+Please enter your name: Anuarul Irfan Bin Mohd Sofian
+Please enter your Matric id: 288181
+Please enter your age: 20
+Please enter your current semester: Semester 1
+ 
+============================================================================================================================== 
+There are  10000 books that students can borrow
+How many books do you want to borrow? (maximum books that can be borrow = 5)
+5
+Enter the name of books you want to borrow 
+HArryPotter
+Please enter the date of issuing following date of return.
+Date of issuing:
+12/5/2022
+Date of return:
+15/5/2022
+Enter the name of books you want to borrow 
+Games
+Please enter the date of issuing following date of return.
+Date of issuing:
+12/5/2022
+Date of return:
+16/5/2022
+Enter the name of books you want to borrow 
+KampungKu
+Please enter the date of issuing following date of return.
+Date of issuing:
+12/5/2022
+Date of return:
+14/5/2022
+Enter the name of books you want to borrow 
+HelloWorld
+Please enter the date of issuing following date of return.
+Date of issuing:
+12/5/2022
+Date of return:
+16/5/2022
+Enter the name of books you want to borrow 
+UUM
+Please enter the date of issuing following date of return.
+Date of issuing:
+12/5/2022
+Date of return:
+15/5/2022
+============================================================================================================================== 
+Fine will be given if students return the books past date of return 
+The amount of fix fined is RM 1.00
+
+                Days after date of return           Fine                 Total to be paid 
+                        1                           RM1 X 1              RM1.00           
+                        2                           RM1 X 1              RM2.00           
+                        3                           RM1 X 1              RM4.00           
+                        4                           RM1 X 1              RM4.00           
+                        5                           RM1 X 1              RM5.00           
+ 
+After 5 days past the date of return, students will be reprimanded and blacklist for borrowing books from the library
+ 
+============================================================================================================================== 
+ 
+Thank you for using the University Library Management Sytsem 
+There are  9995 books remaining in the library
+Have a nice day! 
+
+//
+Output if number of borrow books>5
+
+Welcome to the University Library Management System.
+Please enter your personal information to proceed to borrow a book.
+Please enter your name: Anuarul Irfan Bin Mohd Sofian
+Please enter your Matric id: 288181
+Please enter your age: 20
+Please enter your current semester: Semester 1
+ 
+============================================================================================================================== 
+There are  10000 books that students can borrow
+How many books do you want to borrow? (maximum books that can be borrow = 5)
+6
+The number of books that you want to borrow exceeds the maximum books that can be borrowed.
+Please restart the program to borrow books from the library
