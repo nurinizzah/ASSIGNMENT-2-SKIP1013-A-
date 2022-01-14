@@ -1,0 +1,756 @@
+package assignments;
+
+import java.util.Scanner;
+
+public class Assignment_2 {
+
+	public static void main(String[] args) {
+		
+		    Scanner sc = new Scanner(System.in);
+		    
+		    String name, matricNumber;
+		    String subjectCode = " ";
+		    int semester = 1, creditHours = 3;
+		    int i=0; 
+		    int j=0;
+		    double quiz, assignment, project_exam;
+		    double mark1, mark2, mark3, mark4, mark5, mark6;
+		    double m1, m2, m3, m4, m5, m6;
+		    double pointEarned, totalCreditHours; 
+		    double pointV1=0, pointV2=0, pointV3=0, pointV4=0, pointV5=0, pointV6=0;
+		    double GPA;
+			
+		    System.out.println(" **************************************************************************************************** ");
+			System.out.println(" *                             BACHELOR OF COMPUTER SCIENCE WITH HONOURS                            * ");
+			System.out.println(" **************************************************************************************************** ");
+			System.out.println("\n - - - - -// Welcome to the GPA Tracking System //- - - - - " + "\n");
+			System.out.println("\n    Hello! Please fill the form before proceeding." + "\n");
+			System.out.print("     > Full Name             : ");
+			name = sc.nextLine();
+			System.out.print("     > Matric Number         : ");
+			matricNumber = sc.next();
+			System.out.print("     > Semester Status       : ");
+			semester = sc.nextInt();
+			
+			if (semester == 1) {
+				System.out.println("\n       |---------------------------------------------------------------------------|");
+				System.out.println("       |                      HELLO!                                               |");
+				System.out.println("       |---------------------------------------------------------------------------|");
+				System.out.println("       |  <> Name                   : " +name+ "                  |");
+				System.out.println("       |  <> Matric number          : " +matricNumber+ "                                       |");
+				System.out.println("       |  <> Semester Status        : " +semester+ "                                            |");
+				System.out.println("       |  <> Programme              : Bachelor of Computer Science with Honours    |");
+				System.out.println("       |  <> Num. of subjects taken : 6                                            |");
+				System.out.println("       |---------------------------------------------------------------------------|" + "\n");	
+				System.out.println("\n\n **************************************************************************************************** ");
+	            System.out.println("\n  This is the list of subjects that you have taken this semester. ");
+	            System.out.println("\n **************************************************************************************************** ");
+	            System.out.println("\n       |-------------------------------------------------------------------------------------|");
+				System.out.println("       |                                    SEMESTER 1                                       |");
+				System.out.println("       |-------------------------------------------------------------------------------------|");
+				System.out.println("       |                        BACHELOR OF COMPUTER SCIENCE (HONS.)                         |");
+				System.out.println("       |-------------------------------------------------------------------------------------|");
+				System.out.println("       |  CODE        SUBJECT NAME                                  CREDIT HOURS             |");
+				System.out.println("       |                                                                                     |");
+				System.out.println("       |  SKIK1013    Computer Organizations and Architecture            3                   |");
+				System.out.println("       |  SKIP1013    Programming 1                                      3                   |");
+				System.out.println("       |  SCQM1013    Mathematics for Computing                          3                   |");
+				System.out.println("       |  MPU1013     Penghayatan Etika dan Peradaban                    3                   |");
+				System.out.println("       |  MPU1043     Falsafah dan Isu Semasa                            3                   |");
+				System.out.println("       |  SADN1033    Kenegaraan                                         3                   |");
+				System.out.println("       |-------------------------------------------------------------------------------------|" + "\n");                                                                                                                           //final exam/project - 30%
+	            System.out.print("     > Please enter the marks for the following assessments : "); 
+	            System.out.println("\n\n       |-----------------------------------------------------|");
+				System.out.println("       |                       GUIDLINE                      |");
+				System.out.println("       |-----------------------------------------------------|");
+				System.out.println("       |  PARTS                   PERCENTAGE MARKS(%)        |");
+				System.out.println("       |                                                     |");
+				System.out.println("       |  + Quiz                         20                  |");
+				System.out.println("       |  + Assignments                  50                  |");
+				System.out.println("       |  + Final exam / Project         30                  |");
+				System.out.println("       |-----------------------------------------------------|");
+				
+	            for (i=0; i<6; i++) {
+	    			System.out.print("\n       Enter subject code : ");
+	    			subjectCode=sc.next();
+	    			
+	    			if (subjectCode.contains("SKIP1013")) {
+	    			    System.out.println("\n       ||--- SKIP1013 ---||");
+	    			    System.out.print("\n         <> Subject            : Programming 1 ");
+	    			    System.out.print("\n         <> Quiz               : ");
+	    	            quiz = sc.nextInt();
+	    	            System.out.print("         <> Assignment         : ");
+	    	            assignment = sc.nextInt();
+	    	            System.out.print("         <> Project/Final Exam : ");
+	    	            project_exam = sc.nextInt();
+	    	            
+	    	            mark1 = quiz + assignment + project_exam;
+	    	            
+	    	            if ((mark1 >= 90) && (mark1 <= 100)) {
+	    	            	System.out.println("\n         The total mark for SKIP1013 is " +mark1);
+	    	                System.out.println("         The grade achieved for SKIP1013 is Grade A+");
+	    	            	System.out.println("         The grade point for SKIP1013 is 4.00");
+	    	            }
+	    	            else if ((mark1 >= 80) && (mark1 <= 89)) {
+	    	            	System.out.println("\n         The total mark for SKIP1013 is " +mark1);
+	    	                System.out.println("         The grade achieved for SKIP1013 is Grade A");
+	    	            	System.out.println("         The grade point for SKIP1013 is 4.00");
+	    	            }
+	    	            else if ((mark1 >= 75) && (mark1 <= 79)) {
+	    	            	System.out.println("\n         The total mark for SKIP1013 is " +mark1);
+	    	                System.out.println("         The grade achieved for SKIP1013 is Grade A-");
+	    	            	System.out.println("         The grade point for SKIP1013 is 3.67");
+	    	            }
+	    	            else if ((mark1 >= 70) && (mark1 <= 74)) {
+	    	            	System.out.println("\n         The total mark for SKIP1013 is " +mark1);
+	    	                System.out.println("         The grade achieved for SKIP1013 is Grade B+");
+	    	            	System.out.println("         The grade point for SKIP1013 is 3.33");
+	    	            }
+	    	            else if ((mark1 >= 65) && (mark1 <= 69)) {
+	    	            	System.out.println("\n         The total mark for SKIP1013 is " +mark1);
+	    	                System.out.println("         The grade achieved for SKIP1013 is Grade B");
+	    	            	System.out.println("         The grade point for SKIP1013 is 3.00");
+	    	            }
+	    	            else if ((mark1 >= 60) && (mark1 <= 64)) {
+	    	            	System.out.println("\n         The total mark for SKIP1013 is " +mark1);
+	    	                System.out.println("         The grade achieved for SKIP1013 is Grade B-");
+	    	            	System.out.println("         The grade point for SKIP1013 is 2.67");
+	    	            }
+	    	            else if ((mark1 >= 55) && (mark1 <= 59)) {
+	    	            	System.out.println("\n         The total mark for SKIP1013 is " +mark1);
+	    	                System.out.println("         The grade achieved for SKIP1013 is Grade C+");
+	    	            	System.out.println("         The grade point for SKIP1013 is 2.33");
+	    	            }
+	    	            else if ((mark1 >= 50) && (mark1 <= 54)) {
+	    	            	System.out.println("\n         The total mark for SKIP1013 is " +mark1);
+	    	                System.out.println("         The grade achieved for SKIP1013 is Grade C");
+	    	            	System.out.println("         The grade point for SKIP1013 is 2.00");
+	    	            }
+	    	            else if ((mark1 >= 45) && (mark1 <= 49)) {
+	    	            	System.out.println("\n         The total mark for SKIP1013 is " +mark1);
+	    	                System.out.println("         The grade achieved for SKIP1013 is Grade C-");
+	    	            	System.out.println("         The grade point for SKIP1013 is 1.67");
+	    	            }
+	    	            else if ((mark1 >= 40) && (mark1 <= 44)) {
+	    	            	System.out.println("\n         The total mark for SKIP1013 is " +mark1);
+	    	                System.out.println("         The grade achieved for SKIP1013 is Grade D+");
+	    	            	System.out.println("         The grade point for SKIP1013 is 1.33");
+	    	            }
+	    	            else if ((mark1 >= 35) && (mark1 <= 39)) {
+	    	            	System.out.println("\n         The total mark for SKIP1013 is " +mark1);
+	    	                System.out.println("         The grade achieved for SKIP1013 is Grade D");
+	    	            	System.out.println("         The grade point for SKIP1013 is 1.00");
+	    	            }
+	    	            else if ((mark1 >= 0) && (mark1 <= 34)) {
+	    	            	System.out.println("\n         The total mark for SKIP1013 is " +mark1);
+	    	                System.out.println("         The grade achieved for SKIP1013 is Grade F");
+	    	            	System.out.println("         The grade point for SKIP1013 is 0.00");
+	    	            }
+	    	            else {
+	    	            	System.out.println("\n         Your status for this subject is Barred/Incomplete/Withdraw" );   
+	    	            }
+	    			}
+	    			else if (subjectCode.contains("SKIK1013")) {
+	    			    System.out.println("\n       ||--- SKIK1013 ---|| ");
+	    			    System.out.print("\n         <> Subject            : Computer Organizations and Architecture ");
+	    			    System.out.print("\n         <> Quiz               : ");
+	    	            quiz = sc.nextInt();
+	    	            System.out.print("         <> Assignment         : ");
+	    	            assignment = sc.nextInt();
+	    	            System.out.print("         <> Project/Final Exam : ");
+	    	            project_exam = sc.nextInt();
+	    	            
+	    	            mark2 = quiz + assignment + project_exam;
+	    	            
+	    	            if ((mark2 >= 90) && (mark2 <= 100)) {
+	    	            	System.out.println("\n         The total mark for SKIK1013 is " +mark2);
+	    	                System.out.println("         The grade achieved for SKIK1013 is Grade A+");
+	    	            	System.out.println("         The grade point for SKIK1013 is 4.00");
+	    	            }
+	    	            else if ((mark2 >= 80) && (mark2 <= 89)) {
+	    	            	System.out.println("\n         The total mark for SKIK1013 is " +mark2);
+	    	                System.out.println("         The grade achieved for SKIK1013 is Grade A");
+	    	            	System.out.println("         The grade point for SKIK1013 is 4.00");
+	    	            }
+	    	            else if ((mark2 >= 75) && (mark2 <= 79)) {
+	    	            	System.out.println("\n         The total mark for SKIK1013 is " +mark2);
+	    	                System.out.println("         The grade achieved for SKIK1013 is Grade A-");
+	    	            	System.out.println("         The grade point for SKIK1013 is 3.67");
+	    	            }
+	    	            else if ((mark2 >= 70) && (mark2 <= 74)) {
+	    	            	System.out.println("\n         The total mark for SKIK1013 is " +mark2);
+	    	                System.out.println("         The grade achieved for SKIK1013 is Grade B+");
+	    	            	System.out.println("         The grade point for SKIK1013 is 3.33");
+	    	            }
+	    	            else if ((mark2 >= 65) && (mark2 <= 69)) {
+	    	            	System.out.println("\n         The total mark for SKIK1013 is " +mark2);
+	    	                System.out.println("         The grade achieved for SKIK1013 is Grade B");
+	    	            	System.out.println("         The grade point for SKIK1013 is 3.00");
+	    	            }
+	    	            else if ((mark2 >= 60) && (mark2 <= 64)) {
+	    	            	System.out.println("\n         The total mark for SKIK1013 is " +mark2);
+	    	                System.out.println("         The grade achieved for SKIK1013 is Grade B-");
+	    	            	System.out.println("         The grade point for SKIK1013 is 2.67");
+	    	            }
+	    	            else if ((mark2 >= 55) && (mark2 <= 59)) {
+	    	            	System.out.println("\n         The total mark for SKIK1013 is " +mark2);
+	    	                System.out.println("         The grade achieved for SKIK1013 is Grade C+");
+	    	            	System.out.println("         The grade point for SKIK1013 is 2.33");
+	    	            }
+	    	            else if ((mark2 >= 50) && (mark2 <= 54)) {
+	    	            	System.out.println("\n         The total mark for SKIK1013 is " +mark2);
+	    	                System.out.println("         The grade achieved for SKIK1013 is Grade C");
+	    	            	System.out.println("         The grade point for SKIK1013 is 2.00");
+	    	            }
+	    	            else if ((mark2 >= 45) && (mark2 <= 49)) {
+	    	            	System.out.println("\n         The total mark for SKIK1013 is " +mark2);
+	    	                System.out.println("         The grade achieved for SKIK1013 is Grade C-");
+	    	            	System.out.println("         The grade point for SKIK1013 is 1.67");
+	    	            }
+	    	            else if ((mark2 >= 40) && (mark2 <= 44)) {
+	    	            	System.out.println("\n         The total mark for SKIK1013 is " +mark2);
+	    	                System.out.println("         The grade achieved for SKIK1013 is Grade D+");
+	    	            	System.out.println("         The grade point for SKIK1013 is 1.33");
+	    	            }
+	    	            else if ((mark2 >= 35) && (mark2 <= 39)) {
+	    	            	System.out.println("\n         The total mark for SKIK1013 is " +mark2);
+	    	                System.out.println("         The grade achieved for SKIK1013 is Grade D");
+	    	            	System.out.println("         The grade point for SKIK1013 is 1.00");
+	    	            }
+	    	            else if ((mark2 >= 0) && (mark2 <= 34)) {
+	    	            	System.out.println("\n         The total mark for SKIK1013 is " +mark2);
+	    	                System.out.println("         The grade achieved for SKIK1013 is Grade F");
+	    	            	System.out.println("         The grade point for SKIK1013 is 0.00");
+	    	            }
+	    	            else {
+	    	            	System.out.println("\n         Your status for this subject is Barred/Incomplete/Withdraw" );   
+	    	            }
+	    			}
+	    			else if (subjectCode.contains("SCQM1013")) {
+	    			    System.out.println("\n       ||--- SCQM1013 ---|| ");
+	    			    System.out.print("\n         <> Subject            : Mathematics for Computing ");
+	    			    System.out.print("\n         <> Quiz               : ");
+	    	            quiz = sc.nextInt();
+	    	            System.out.print("         <> Assignment         : ");
+	    	            assignment = sc.nextInt();
+	    	            System.out.print("         <> Project/Final Exam : ");
+	    	            project_exam = sc.nextInt();
+	    	            
+	    	            mark3 = quiz + assignment + project_exam;
+	    	            
+	    	            if ((mark3 >= 90) && (mark3 <= 100)) {
+	    	            	System.out.println("\n         The total mark for SCQM1013 is " +mark3);
+	    	                System.out.println("         The grade achieved for SCQM1013 is Grade A+");
+	    	            	System.out.println("         The grade point for SCQM1013 is 4.00");
+	    	            }
+	    	            else if ((mark3 >= 80) && (mark3 <= 89)) {
+	    	            	System.out.println("\n         The total mark for SCQM1013 is " +mark3);
+	    	                System.out.println("         The grade achieved for SCQM1013 is Grade A");
+	    	            	System.out.println("         The grade point for SCQM1013 is 4.00");
+	    	            }
+	    	            else if ((mark3 >= 75) && (mark3 <= 79)) {
+	    	            	System.out.println("\n         The total mark for SCQM1013 is " +mark3);
+	    	                System.out.println("         The grade achieved for SCQM1013 is Grade A-");
+	    	            	System.out.println("         The grade point for SCQM1013 is 3.67");
+	    	            }
+	    	            else if ((mark3 >= 70) && (mark3 <= 74)) {
+	    	            	System.out.println("\n         The total mark for SCQM1013 is " +mark3);
+	    	                System.out.println("         The grade achieved for SCQM1013 is Grade B+");
+	    	            	System.out.println("         The grade point for SCQM1013 is 3.33");
+	    	            }
+	    	            else if ((mark3 >= 65) && (mark3 <= 69)) {
+	    	            	System.out.println("\n         The total mark for SCQM1013 is " +mark3);
+	    	                System.out.println("         The grade achieved for SCQM1013 is Grade B");
+	    	            	System.out.println("         The grade point for SCQM1013 is 3.00");
+	    	            }
+	    	            else if ((mark3 >= 60) && (mark3 <= 64)) {
+	    	            	System.out.println("\n         The total mark for SCQM1013 is " +mark3);
+	    	                System.out.println("         The grade achieved for SCQM1013 is Grade B-");
+	    	            	System.out.println("         The grade point for SCQM1013 is 2.67");
+	    	            }
+	    	            else if ((mark3 >= 55) && (mark3 <= 59)) {
+	    	            	System.out.println("\n         The total mark for SCQM1013 is " +mark3);
+	    	                System.out.println("         The grade achieved for SCQM1013 is Grade C+");
+	    	            	System.out.println("         The grade point for SCQM1013 is 2.33");
+	    	            }
+	    	            else if ((mark3 >= 50) && (mark3 <= 54)) {
+	    	            	System.out.println("\n         The total mark for SCQM1013 is " +mark3);
+	    	                System.out.println("         The grade achieved for SCQM1013 is Grade C");
+	    	            	System.out.println("         The grade point for SCQM1013 is 2.00");
+	    	            }
+	    	            else if ((mark3 >= 45) && (mark3 <= 49)) {
+	    	            	System.out.println("\n         The total mark for SCQM1013 is " +mark3);
+	    	                System.out.println("         The grade achieved for SCQM1013 is Grade C-");
+	    	            	System.out.println("         The grade point for SCQM1013 is 1.67");
+	    	            }
+	    	            else if ((mark3 >= 40) && (mark3 <= 44)) {
+	    	            	System.out.println("\n         The total mark for SCQM1013 is " +mark3);
+	    	                System.out.println("         The grade achieved for SCQM1013 is Grade D+");
+	    	            	System.out.println("         The grade point for SCQM1013 is 1.33");
+	    	            }
+	    	            else if ((mark3 >= 35) && (mark3 <= 39)) {
+	    	            	System.out.println("\n         The total mark for SCQM1013 is " +mark3);
+	    	                System.out.println("         The grade achieved for SCQM1013 is Grade D");
+	    	            	System.out.println("         The grade point for SCQM1013 is 1.00");
+	    	            }
+	    	            else if ((mark3 >= 0) && (mark3 <= 34)) {
+	    	            	System.out.println("\n         The total mark for SCQM1013 is " +mark3);
+	    	                System.out.println("         The grade achieved for SCQM1013 is Grade F");
+	    	            	System.out.println("         The grade point for SCQM1013 is 0.00");
+	    	            }
+	    	            else {
+	    	            	System.out.println("\n         Your status for this subject is Barred/Incomplete/Withdraw" );   
+	    	            }
+	    	        }
+	    			else if (subjectCode.contains("SADN1033")) {
+	    			    System.out.println("\n       ||--- SADN1033 ---||");
+	    			    System.out.print("\n         <> Subject            : Kenegaraan ");
+	    			    System.out.print("\n         <> Quiz               : ");
+	    	            quiz = sc.nextInt();
+	    	            System.out.print("         <> Assignment         : ");
+	    	            assignment = sc.nextInt();
+	    	            System.out.print("         <> Project/Final Exam : ");
+	    	            project_exam = sc.nextInt();
+	    	            
+	    	            mark4 = quiz + assignment + project_exam;
+	    	            
+	    	            if ((mark4 >= 90) && (mark4 <= 100)) {
+	    	            	System.out.println("\n         The total mark for SADN1033 is " +mark4);
+	    	                System.out.println("         The grade achieved for SADN1033 is Grade A+");
+	    	            	System.out.println("         The grade point for SADN1033 is 4.00");
+	    	            }
+	    	            else if ((mark4 >= 80) && (mark4 <= 89)) {
+	    	            	System.out.println("\n         The total mark for SADN1033 is " +mark4);
+	    	                System.out.println("         The grade achieved for SADN1033 is Grade A");
+	    	            	System.out.println("         The grade point for SADN1033 is 4.00");
+	    	            }
+	    	            else if ((mark4 >= 75) && (mark4 <= 79)) {
+	    	            	System.out.println("\n         The total mark for SADN1033 is " +mark4);
+	    	                System.out.println("         The grade achieved for SADN1033 is Grade A-");
+	    	            	System.out.println("         The grade point for SADN1033 is 3.67");
+	    	            }
+	    	            else if ((mark4 >= 70) && (mark4 <= 74)) {
+	    	            	System.out.println("\n         The total mark for SADN1033 is " +mark4);
+	    	                System.out.println("         The grade achieved for SADN1033 is Grade B+");
+	    	            	System.out.println("         The grade point for SADN1033 is 3.33");
+	    	            }
+	    	            else if ((mark4 >= 65) && (mark4 <= 69)) {
+	    	            	System.out.println("\n         The total mark for SADN1013 is " +mark4);
+	    	                System.out.println("         The grade achieved for SADN1013 is Grade B");
+	    	            	System.out.println("         The grade point for SADN1013 is 3.00");
+	    	            }
+	    	            else if ((mark4 >= 60) && (mark4 <= 64)) {
+	    	            	System.out.println("\n         The total mark for SADN1033 is " +mark4);
+	    	                System.out.println("         The grade achieved for SADN1033 is Grade B-");
+	    	            	System.out.println("         The grade point for SADN1033 is 2.67");
+	    	            }
+	    	            else if ((mark4 >= 55) && (mark4 <= 59)) {
+	    	            	System.out.println("\n         The total mark for SADN1033 is " +mark4);
+	    	                System.out.println("         The grade achieved for SADN1033 is Grade C+");
+	    	            	System.out.println("         The grade point for SADN1033 is 2.33");
+	    	            }
+	    	            else if ((mark4 >= 50) && (mark4 <= 54)) {
+	    	            	System.out.println("\n         The total mark for SADN1033 is " +mark4);
+	    	                System.out.println("         The grade achieved for SADN1033 is Grade C");
+	    	            	System.out.println("         The grade point for SADN1033 is 2.00");
+	    	            }
+	    	            else if ((mark4 >= 45) && (mark4 <= 49)) {
+	    	            	System.out.println("\n         The total mark for SADN1033 is " +mark4);
+	    	                System.out.println("         The grade achieved for SADN1033 is Grade C-");
+	    	            	System.out.println("         The grade point for SADN1033 is 1.67");
+	    	            }
+	    	            else if ((mark4 >= 40) && (mark4 <= 44)) {
+	    	            	System.out.println("\n         The total mark for SADN1033 is " +mark4);
+	    	                System.out.println("         The grade achieved for SADN1033 is Grade D+");
+	    	            	System.out.println("         The grade point for SADN1033 is 1.33");
+	    	            }
+	    	            else if ((mark4 >= 35) && (mark4 <= 39)) {
+	    	            	System.out.println("\n         The total mark for SADN1033 is " +mark4);
+	    	                System.out.println("         The grade achieved for SADN1033 is Grade D");
+	    	            	System.out.println("         The grade point for SADN1033 is 1.00");
+	    	            }
+	    	            else if ((mark4 >= 0) && (mark4 <= 34)) {
+	    	            	System.out.println("\n         The total mark for SADN1033 is " +mark4);
+	    	                System.out.println("         The grade achieved for SADN1033 is Grade F");
+	    	            	System.out.println("         The grade point for SADN1033 is 0.00");
+	    	            }
+	    	            else {
+	    	            	System.out.println("\n         Your status for this subject is Barred/Incomplete/Withdraw" );   
+	    	            }
+	    			}
+	    			else if (subjectCode.contains("MPU1013")) {
+	    			    System.out.println("\n       ||--- MPU1013 ---||");
+	    			    System.out.print("\n         <> Subject            : Penghayatan Etika dan Peradaban ");
+	    			    System.out.print("\n         <> Quiz               : ");
+	    	            quiz = sc.nextInt();
+	    	            System.out.print("         <> Assignment         : ");
+	    	            assignment = sc.nextInt();
+	    	            System.out.print("         <> Project/Final Exam : ");
+	    	            project_exam = sc.nextInt();
+	    	            
+	    	            mark5 = quiz + assignment + project_exam;
+	    	            
+	    	            if ((mark5 >= 90) && (mark5 <= 100)) {
+	    	            	System.out.println("\n         The total mark for MPU1013 is " +mark5);
+	    	                System.out.println("         The grade achieved for MPU1013 is Grade A+");
+	    	            	System.out.println("         The grade point for MPU1013 is 4.00");
+	    	            }
+	    	            else if ((mark5 >= 80) && (mark5 <= 89)) {
+	    	            	System.out.println("\n         The total mark for MPU1013 is " +mark5);
+	    	                System.out.println("         The grade achieved for MPU1013 is Grade A");
+	    	            	System.out.println("         The grade point for MPU1013 is 4.00");
+	    	            }
+	    	            else if ((mark5 >= 75) && (mark5 <= 79)) {
+	    	            	System.out.println("\n         The total mark for MPU1013 is " +mark5);
+	    	                System.out.println("         The grade achieved for MPU1013 is Grade A-");
+	    	            	System.out.println("         The grade point for MPU1013 is 3.67");
+	    	            }
+	    	            else if ((mark5 >= 70) && (mark5 <= 74)) {
+	    	            	System.out.println("\n         The total mark for MPU1013 is " +mark5);
+	    	                System.out.println("         The grade achieved for MPU1013 is Grade B+");
+	    	            	System.out.println("         The grade point for MPU1013 is 3.33");
+	    	            }
+	    	            else if ((mark5 >= 65) && (mark5 <= 69)) {
+	    	            	System.out.println("\n         The total mark for MPU1013 is " +mark5);
+	    	                System.out.println("         The grade achieved for MPU1013 is Grade B");
+	    	            	System.out.println("         The grade point for MPU1013 is 3.00");
+	    	            }
+	    	            else if ((mark5 >= 60) && (mark5 <= 64)) {
+	    	            	System.out.println("\n         The total mark for MPU1013 is " +mark5);
+	    	                System.out.println("         The grade achieved for MPU1013 is Grade B-");
+	    	            	System.out.println("         The grade point for MPU1013 is 2.67");
+	    	            }
+	    	            else if ((mark5 >= 55) && (mark5 <= 59)) {
+	    	            	System.out.println("\n         The total mark for MPU1013 is " +mark5);
+	    	                System.out.println("         The grade achieved for MPU1013 is Grade C+");
+	    	            	System.out.println("         The grade point for MPU1013 is 2.33");
+	    	            }
+	    	            else if ((mark5 >= 50) && (mark5 <= 54)) {
+	    	            	System.out.println("\n         The total mark for MPU1013 is " +mark5);
+	    	                System.out.println("         The grade achieved for MPU1013 is Grade C");
+	    	            	System.out.println("         The grade point for MPU1013 is 2.00");
+	    	            }
+	    	            else if ((mark5 >= 45) && (mark5 <= 49)) {
+	    	            	System.out.println("\n         The total mark for MPU1013 is " +mark5);
+	    	                System.out.println("         The grade achieved for MPU1013 is Grade C-");
+	    	            	System.out.println("         The grade point for MPU1013 is 1.67");
+	    	            }
+	    	            else if ((mark5 >= 40) && (mark5 <= 44)) {
+	    	            	System.out.println("\n         The total mark for MPU1013 is " +mark5);
+	    	                System.out.println("         The grade achieved for MPU1013 is Grade D+");
+	    	            	System.out.println("         The grade point for MPU1013 is 1.33");
+	    	            }
+	    	            else if ((mark5 >= 35) && (mark5 <= 39)) {
+	    	            	System.out.println("\n         The total mark for MPU1013 is " +mark5);
+	    	                System.out.println("         The grade achieved for MPU1013 is Grade D");
+	    	            	System.out.println("         The grade point for MPU1013 is 1.00");
+	    	            }
+	    	            else if ((mark5 >= 0) && (mark5 <= 34)) {
+	    	            	System.out.println("\n         The total mark for MPU1013 is " +mark5);
+	    	                System.out.println("         The grade achieved for MPU1013 is Grade F");
+	    	            	System.out.println("         The grade point for MPU1013 is 0.00");
+	    	            }
+	    	            else {
+	    	            	System.out.println("\n         Your status for this subject is Barred/Incomplete/Withdraw" );   
+	    	            }
+	    	        }
+	    			else if (subjectCode.contains("MPU1043")) {
+	    			    System.out.println("\n       ||--- MPU1043 ---||");
+	    			    System.out.print("\n         <> Subject            : Falsafah dan Isu Semasa ");
+	    			    System.out.print("\n         <> Quiz               : ");
+	    	            quiz = sc.nextInt();
+	    	            System.out.print("         <> Assignment         : ");
+	    	            assignment = sc.nextInt();
+	    	            System.out.print("         <> Project/Final Exam : ");
+	    	            project_exam = sc.nextInt();
+	    	            
+	    	            mark6 = quiz + assignment + project_exam;
+	    	            
+	    	            if ((mark6 >= 90) && (mark6 <= 100)) {
+	    	            	System.out.println("\n         The total mark for MPU1043 is " +mark6);
+	    	                System.out.println("         The grade achieved for MPU1043 is Grade A+");
+	    	            	System.out.println("         The grade point for MPU1043 is 4.00");
+	    	            }
+	    	            else if ((mark6 >= 80) && (mark6 <= 89)) {
+	    	            	System.out.println("\n         The total mark for MPU1043 is " +mark6);
+	    	                System.out.println("         The grade achieved for MPU1043 is Grade A");
+	    	            	System.out.println("         The grade point for MPU1043 is 4.00");
+	    	            }
+	    	            else if ((mark6 >= 75) && (mark6 <= 79)) {
+	    	            	System.out.println("\n         The total mark for MPU1043 is " +mark6);
+	    	                System.out.println("         The grade achieved for MPU1043 is Grade A-");
+	    	            	System.out.println("         The grade point for MPU1043 is 3.67");
+	    	            }
+	    	            else if ((mark6 >= 70) && (mark6 <= 74)) {
+	    	            	System.out.println("\n         The total mark for MPU1043 is " +mark6);
+	    	                System.out.println("         The grade achieved for MPU1043 is Grade B+");
+	    	            	System.out.println("         The grade point for MPU1043 is 3.33");
+	    	            }
+	    	            else if ((mark6 >= 65) && (mark6 <= 69)) {
+	    	            	System.out.println("\n         The total mark for MPU1043 is " +mark6);
+	    	                System.out.println("         The grade achieved for MPU1043 is Grade B");
+	    	            	System.out.println("         The grade point for MPU1043 is 3.00");
+	    	            }
+	    	            else if ((mark6 >= 60) && (mark6 <= 64)) {
+	    	            	System.out.println("\n         The total mark for MPU1043 is " +mark6);
+	    	                System.out.println("         The grade achieved for MPU1043 is Grade B-");
+	    	            	System.out.println("         The grade point for MPU1043 is 2.67");
+	    	            }
+	    	            else if ((mark6 >= 55) && (mark6 <= 59)) {
+	    	            	System.out.println("\n         The total mark for MPU1043 is " +mark6);
+	    	                System.out.println("         The grade achieved for MPU1043 is Grade C+");
+	    	            	System.out.println("         The grade point for MPU1043 is 2.33");
+	    	            }
+	    	            else if ((mark6 >= 50) && (mark6 <= 54)) {
+	    	            	System.out.println("\n         The total mark for MPU1043 is " +mark6);
+	    	                System.out.println("         The grade achieved for MPU1043 is Grade C");
+	    	            	System.out.println("         The grade point for MPU1043 is 2.00");
+	    	            }
+	    	            else if ((mark6 >= 45) && (mark6 <= 49)) {
+	    	            	System.out.println("\n         The total mark for SMPU1043 is " +mark6);
+	    	                System.out.println("         The grade achieved for MPU1043 is Grade C-");
+	    	            	System.out.println("         The grade point for MPU1043 is 1.67");
+	    	            }
+	    	            else if ((mark6 >= 40) && (mark6 <= 44)) {
+	    	            	System.out.println("\n         The total mark for MPU1043 is " +mark6);
+	    	                System.out.println("         The grade achieved for MPU1043 is Grade D+");
+	    	            	System.out.println("         The grade point for MPU1043 is 1.33");
+	    	            }
+	    	            else if ((mark6 >= 35) && (mark6 <= 39)) {
+	    	            	System.out.println("\n         The total mark for MPU1043 is " +mark6);
+	    	                System.out.println("         The grade achieved for MPU1043 is Grade D");
+	    	            	System.out.println("         The grade point for MPU1043 is 1.00");
+	    	            }
+	    	            else if ((mark6 >= 0) && (mark6 <= 34)) {
+	    	            	System.out.println("\n         The total mark for MPU1043 is " +mark6);
+	    	                System.out.println("         The grade achieved for MPU1043 is Grade F");
+	    	            	System.out.println("         The grade point for MPU1043 is 0.00");
+	    	            }
+	    	            else {
+	    	            	System.out.println("\n         Your status for this subject is Barred/Incomplete/Withdraw" );   
+	    	            }
+	    	        }
+	    		}
+				System.out.println("\n\n **************************************************************************************************** ");
+				System.out.println("\n                 Grade Point Average (GPA) Calculation ");
+				System.out.println("\n **************************************************************************************************** " +"\n");
+				System.out.println("      |------------------------------------------------------------------|");
+				System.out.println("      |                        GRADE REFERENCE                           |");
+				System.out.println("      |------------------------------------------------------------------|");
+				System.out.println("      |    Marks (%)   |  Grade  |    Grade Points                       |");
+				System.out.println("      |                |         |                                       |");
+				System.out.println("      |    90 - 100    |    A+   |    4.00 (Excellent)                   |");
+				System.out.println("      |    80 - 89     |    A    |    4.00 (Excellent)                   |");
+				System.out.println("      |    75 - 79     |    A-   |    3.67 (Credit)                      |");
+				System.out.println("      |    70 - 74     |    B+   |    3.33 (Credit)                      |");
+				System.out.println("      |    65 - 69     |    B    |    3.00 (Credit)                      |");
+				System.out.println("      |    60 - 64     |    B-   |    2.67 (Good)                        |");
+				System.out.println("      |    55 - 59     |    C+   |    2.33 (Good)                        |");
+				System.out.println("      |    50 - 54     |    C    |    2.00 (Pass)                        |");
+				System.out.println("      |    45 - 49     |    C-   |    1.67 (Fail)                        |");
+				System.out.println("      |    40 - 44     |    D+   |    1.33 (Fail)                        |");
+				System.out.println("      |    35 - 39     |    D    |    1.00 (Fail)                        |");
+				System.out.println("      |     0 - 34     |    F    |    0.00 (Fail)                        |");
+				System.out.println("      |                |    X    |    Barred                             |");
+				System.out.println("      |                |    TL   |    Incomplete                         |");
+				System.out.println("      |                |   M/TM  |    Satisfactory/Not Satisfactory      |");
+				System.out.println("      |                |    TD   |    Withdraw                           |");
+				System.out.println("      |------------------------------------------------------------------|" + "\n");
+				
+				System.out.println("\n      ||--- SKIP1013 ---||");
+			    System.out.print("\n        <> Subject     : Programming 1");
+			    System.out.print("\n        <> Total mark  : ");
+			    m1=sc.nextDouble();
+			    if ((m1 >= 90) && (m1 <= 100))
+		        	pointV1 = 4.00;
+		        else if ((m1 >= 80) && (m1 <= 89))
+		        	pointV1 = 4.00;
+		        else if ((m1 >= 75) && (m1 <= 79))
+		        	pointV1 = 3.67;
+		        else if ((m1 >= 70) && (m1 <= 74))
+		        	pointV1 = 3.33;
+		        else if ((m1 >= 65) && (m1 <= 69))
+		        	pointV1 = 3.00;
+		        else if ((m1 >= 60) && (m1 <= 64))
+		        	pointV1 = 2.67;
+		        else if ((m1 >= 55) && (m1 <= 59))
+		        	pointV1 = 2.33;
+		        else if ((m1 >= 50) && (m1 <= 54))
+		        	pointV1 = 2.00;
+		        else if ((m1 >= 45) && (m1 <= 49))
+		        	pointV1 = 1.67;
+		        else if ((m1 >= 40) && (m1 <= 44))
+		        	pointV1 = 1.33;
+		        else if ((m1 >= 35) && (m1 <= 39))
+		        	pointV1 = 1.00;
+		        else if ((m1 >= 0) && (m1 <= 34))
+		        	pointV1 = 0.00;
+			    
+			    System.out.println("\n      ||--- SKIK1013 ---||");
+			    System.out.print("\n        <> Subject     : Computer Organizations and Architecture");
+			    System.out.print("\n        <> Total mark  : ");
+			    m2=sc.nextDouble();
+			    if ((m2 >= 90) && (m2 <= 100))
+		        	pointV2 = 4.00;
+		        else if ((m2 >= 80) && (m2 <= 89))
+		        	pointV2 = 4.00;
+		        else if ((m2 >= 75) && (m2 <= 79))
+		        	pointV2 = 3.67;
+		        else if ((m2 >= 70) && (m2 <= 74))
+		        	pointV2 = 3.33;
+		        else if ((m2 >= 65) && (m2 <= 69))
+		        	pointV2 = 3.00;
+		        else if ((m2 >= 60) && (m2 <= 64))
+		        	pointV2 = 2.67;
+		        else if ((m2 >= 55) && (m2 <= 59))
+		        	pointV2 = 2.33;
+		        else if ((m2 >= 50) && (m2 <= 54))
+		        	pointV2 = 2.00;
+		        else if ((m2 >= 45) && (m2 <= 49))
+		        	pointV2 = 1.67;
+		        else if ((m2 >= 40) && (m2 <= 44))
+		        	pointV2 = 1.33;
+		        else if ((m2 >= 35) && (m2 <= 39))
+		        	pointV2 = 1.00;
+		        else if ((m2 >= 0) && (m2 <= 34))
+		        	pointV2 = 0.00;
+			    
+			    System.out.println("\n      ||--- SCQM1013 ---||");
+			    System.out.print("\n        <> Subject     : Mathematics for Computing");
+			    System.out.print("\n        <> Total mark  : ");
+			    m3=sc.nextDouble();
+			    if ((m3 >= 90) && (m3 <= 100))
+		        	pointV3 = 4.00;
+		        else if ((m3 >= 80) && (m3 <= 89))
+		        	pointV3 = 4.00;
+		        else if ((m3 >= 75) && (m3 <= 79))
+		        	pointV3 = 3.67;
+		        else if ((m3 >= 70) && (m3 <= 74))
+		        	pointV3 = 3.33;
+		        else if ((m3 >= 65) && (m3 <= 69))
+		        	pointV3 = 3.00;
+		        else if ((m3 >= 60) && (m3 <= 64))
+		        	pointV3 = 2.67;
+		        else if ((m3 >= 55) && (m3 <= 59))
+		        	pointV3 = 2.33;
+		        else if ((m3 >= 50) && (m3 <= 54))
+		        	pointV3 = 2.00;
+		        else if ((m3 >= 45) && (m3 <= 49))
+		        	pointV3 = 1.67;
+		        else if ((m3 >= 40) && (m3 <= 44))
+		        	pointV3 = 1.33;
+		        else if ((m3 >= 35) && (m3 <= 39))
+		        	pointV3 = 1.00;
+		        else if ((m3 >= 0) && (m3 <= 34))
+		        	pointV3 = 0.00;
+			    
+			    System.out.println("\n      ||--- SADN1033 ---||");
+			    System.out.print("\n        <> Subject     : Kenegaraan");
+			    System.out.print("\n        <> Total mark  : ");
+			    m4=sc.nextDouble();
+			    if ((m4 >= 90) && (m4 <= 100))
+		        	pointV4 = 4.00;
+		        else if ((m4 >= 80) && (m4 <= 89))
+		        	pointV4 = 4.00;
+		        else if ((m4 >= 75) && (m4 <= 79))
+		        	pointV4 = 3.67;
+		        else if ((m4 >= 70) && (m4 <= 74))
+		        	pointV4 = 3.33;
+		        else if ((m4 >= 65) && (m4 <= 69))
+		        	pointV4 = 3.00;
+		        else if ((m4 >= 60) && (m4 <= 64))
+		        	pointV4 = 2.67;
+		        else if ((m4 >= 55) && (m4 <= 59))
+		        	pointV4 = 2.33;
+		        else if ((m4 >= 50) && (m4 <= 54))
+		        	pointV4 = 2.00;
+		        else if ((m4 >= 45) && (m4 <= 49))
+		        	pointV4 = 1.67;
+		        else if ((m4 >= 40) && (m4 <= 44))
+		        	pointV4 = 1.33;
+		        else if ((m4 >= 35) && (m4 <= 39))
+		        	pointV4 = 1.00;
+		        else if ((m4 >= 0) && (m4 <= 34))
+		        	pointV4 = 0.00;
+			   
+			    System.out.println("\n      ||--- MPU1013 ---||");
+			    System.out.print("\n        <> Subject    : Penghayatan Etika dan Peradaban");
+			    System.out.print("\n        <> Total mark : ");
+			    m5=sc.nextDouble();
+			    if ((m5 >= 90) && (m5 <= 100))
+		        	pointV5 = 4.00;
+		        else if ((m5 >= 80) && (m5 <= 89))
+		        	pointV5 = 4.00;
+		        else if ((m5 >= 75) && (m5 <= 79))
+		        	pointV5 = 3.67;
+		        else if ((m5 >= 70) && (m5 <= 74))
+		        	pointV5 = 3.33;
+		        else if ((m5 >= 65) && (m5 <= 69))
+		        	pointV5 = 3.00;
+		        else if ((m5 >= 60) && (m5 <= 64))
+		        	pointV5 = 2.67;
+		        else if ((m5 >= 55) && (m5 <= 59))
+		        	pointV5 = 2.33;
+		        else if ((m5 >= 50) && (m5 <= 54))
+		        	pointV5 = 2.00;
+		        else if ((m5 >= 45) && (m5 <= 49))
+		        	pointV5 = 1.67;
+		        else if ((m5 >= 40) && (m5 <= 44))
+		        	pointV5 = 1.33;
+		        else if ((m5 >= 35) && (m5 <= 39))
+		        	pointV5 = 1.00;
+		        else if ((m5 >= 0) && (m5 <= 34))
+		        	pointV5 = 0.00;
+			    
+				System.out.println("\n      ||--- MPU1043 ---||");
+			    System.out.print("\n        <> Subject    : Falsafah dan Isu Semasa ");
+			    System.out.print("\n        <> Total mark : ");
+			    m6=sc.nextDouble();
+			    if ((m6 >= 90) && (m6 <= 100))
+		        	pointV6 = 4.00;
+		        else if ((m6 >= 80) && (m6 <= 89))
+		        	pointV6 = 4.00;
+		        else if ((m6 >= 75) && (m6 <= 79))
+		        	pointV6 = 3.67;
+		        else if ((m6 >= 70) && (m6 <= 74))
+		        	pointV6 = 3.33;
+		        else if ((m6 >= 65) && (m6 <= 69))
+		        	pointV6 = 3.00;
+		        else if ((m6 >= 60) && (m6 <= 64))
+		        	pointV6 = 2.67;
+		        else if ((m6 >= 55) && (m6 <= 59))
+		        	pointV6 = 2.33;
+		        else if ((m6 >= 50) && (m6 <= 54))
+		        	pointV6 = 2.00;
+		        else if ((m6 >= 45) && (m6 <= 49))
+		        	pointV6 = 1.67;
+		        else if ((m6 >= 40) && (m6 <= 44))
+		        	pointV6 = 1.33;
+		        else if ((m6 >= 35) && (m6 <= 39))
+		        	pointV6 = 1.00;
+		        else if ((m6 >= 0) && (m6 <= 34))
+		        	pointV6 = 0.00;
+			    
+			    System.out.println("\n      The grade point for 'Computer Organizations and Architecture' (SKIK1013) is " +pointV2);
+			    System.out.println("      The grade point for 'Mathematics for Computing' (SCQM1013) is " +pointV3);
+			    System.out.println("      The grade point for 'Kenegaraan' (SADN1033) is " +pointV4);
+			    System.out.println("      The grade point for 'Penghayatan Etika dan Preadaban' (MPU1013) is " +pointV5);
+			    System.out.println("      The grade point for 'Programming 1' (SKIP1013) is " +pointV1);
+			    System.out.println("      The grade point for 'Falsafah dan Isu Semasa' (MPU1043) is " +pointV6);
+				
+				totalCreditHours = creditHours * 6;
+				pointEarned = (pointV1 * 3) + (pointV2 * 3) + (pointV3 * 3) + (pointV4 * 3) + (pointV5 * 3) + (pointV6 * 3);
+				GPA = pointEarned / totalCreditHours;
+				
+				System.out.println("\n      />> Total credit hours for Semester 1        : " +totalCreditHours);
+				System.out.printf("      />> Total grade points earned for Semester 1 : %.2f", pointEarned);
+				System.out.printf("\n      />> GPA for Semester 1                       : %.2f", GPA);
+				
+			}
+			else if (semester != 1) {
+				System.out.println("\n   Access denied.");
+				System.out.println("   Note : You have not yet entered this semester.");
+			}
+			
+	}
+}
