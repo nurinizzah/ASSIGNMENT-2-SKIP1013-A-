@@ -1,0 +1,207 @@
+**************************************************************************************************** 
+ *                             BACHELOR OF COMPUTER SCIENCE WITH HONOURS                            * 
+ **************************************************************************************************** 
+
+ - - - - -// Welcome to the GPA Tracking System //- - - - - 
+
+
+    Hello! Please fill the form before proceeding.
+
+     > Full Name             : NURUL SHAKIRAH BINTI OTSMAN
+     > Matric Number         : 288116
+     > Semester Status       : 1
+
+       |---------------------------------------------------------------------------|
+       |                      HELLO!                                               |
+       |---------------------------------------------------------------------------|
+       |  <> Name                   : NURUL SHAKIRAH BINTI OTSMAN                  |
+       |  <> Matric number          : 288116                                       |
+       |  <> Semester Status        : 1                                            |
+       |  <> Programme              : Bachelor of Computer Science with Honours    |
+       |  <> Num. of subjects taken : 6                                            |
+       |---------------------------------------------------------------------------|
+
+
+
+ **************************************************************************************************** 
+
+  This is the list of subjects that you have taken this semester. 
+
+ **************************************************************************************************** 
+
+       |-------------------------------------------------------------------------------------|
+       |                                    SEMESTER 1                                       |
+       |-------------------------------------------------------------------------------------|
+       |                        BACHELOR OF COMPUTER SCIENCE (HONS.)                         |
+       |-------------------------------------------------------------------------------------|
+       |  CODE        SUBJECT NAME                                  CREDIT HOURS             |
+       |                                                                                     |
+       |  SKIK1013    Computer Organizations and Architecture            3                   |
+       |  SKIP1013    Programming 1                                      3                   |
+       |  SCQM1013    Mathematics for Computing                          3                   |
+       |  MPU1013     Penghayatan Etika dan Peradaban                    3                   |
+       |  MPU1043     Falsafah dan Isu Semasa                            3                   |
+       |  SADN1033    Kenegaraan                                         3                   |
+       |-------------------------------------------------------------------------------------|
+
+     > Please enter the marks for the following assessments : 
+
+       |-----------------------------------------------------|
+       |                       GUIDLINE                      |
+       |-----------------------------------------------------|
+       |  PARTS                   PERCENTAGE MARKS(%)        |
+       |                                                     |
+       |  + Quiz                         20                  |
+       |  + Assignments                  50                  |
+       |  + Final exam / Project         30                  |
+       |-----------------------------------------------------|
+
+       Enter subject code : SKIP1013
+
+       ||--- SKIP1013 ---||
+
+         <> Subject            : Programming 1 
+         <> Quiz               : 18
+         <> Assignment         : 42
+         <> Project/Final Exam : 25
+
+         The total mark for SKIP1013 is 85.0
+         The grade achieved for SKIP1013 is Grade A
+         The grade point for SKIP1013 is 4.00
+
+       Enter subject code : SKIK1013
+
+       ||--- SKIK1013 ---|| 
+
+         <> Subject            : Computer Organizations and Architecture 
+         <> Quiz               : 12
+         <> Assignment         : 28
+         <> Project/Final Exam : 28
+
+         The total mark for SKIK1013 is 68.0
+         The grade achieved for SKIK1013 is Grade B
+         The grade point for SKIK1013 is 3.00
+
+       Enter subject code : SCQM1013
+
+       ||--- SCQM1013 ---|| 
+
+         <> Subject            : Mathematics for Computing 
+         <> Quiz               : 18
+         <> Assignment         : 45
+         <> Project/Final Exam : 24
+
+         The total mark for SCQM1013 is 87.0
+         The grade achieved for SCQM1013 is Grade A
+         The grade point for SCQM1013 is 4.00
+
+       Enter subject code : SADN1033
+
+       ||--- SADN1033 ---||
+
+         <> Subject            : Kenegaraan 
+         <> Quiz               : 18
+         <> Assignment         : 43
+         <> Project/Final Exam : 26
+
+         The total mark for SADN1033 is 87.0
+         The grade achieved for SADN1033 is Grade A
+         The grade point for SADN1033 is 4.00
+
+       Enter subject code : MPU1013
+
+       ||--- MPU1013 ---||
+
+         <> Subject            : Penghayatan Etika dan Peradaban 
+         <> Quiz               : 16
+         <> Assignment         : 33
+         <> Project/Final Exam : 25
+
+         The total mark for MPU1013 is 74.0
+         The grade achieved for MPU1013 is Grade B+
+         The grade point for MPU1013 is 3.33
+
+       Enter subject code : MPU1043
+
+       ||--- MPU1043 ---||
+
+         <> Subject            : Falsafah dan Isu Semasa 
+         <> Quiz               : 17
+         <> Assignment         : 41
+         <> Project/Final Exam : 27
+
+         The total mark for MPU1043 is 85.0
+         The grade achieved for MPU1043 is Grade A
+         The grade point for MPU1043 is 4.00
+
+
+ **************************************************************************************************** 
+
+                 Grade Point Average (GPA) Calculation 
+
+ **************************************************************************************************** 
+
+      |------------------------------------------------------------------|
+      |                        GRADE REFERENCE                           |
+      |------------------------------------------------------------------|
+      |    Marks (%)   |  Grade  |    Grade Points                       |
+      |                |         |                                       |
+      |    90 - 100    |    A+   |    4.00 (Excellent)                   |
+      |    80 - 89     |    A    |    4.00 (Excellent)                   |
+      |    75 - 79     |    A-   |    3.67 (Credit)                      |
+      |    70 - 74     |    B+   |    3.33 (Credit)                      |
+      |    65 - 69     |    B    |    3.00 (Credit)                      |
+      |    60 - 64     |    B-   |    2.67 (Good)                        |
+      |    55 - 59     |    C+   |    2.33 (Good)                        |
+      |    50 - 54     |    C    |    2.00 (Pass)                        |
+      |    45 - 49     |    C-   |    1.67 (Fail)                        |
+      |    40 - 44     |    D+   |    1.33 (Fail)                        |
+      |    35 - 39     |    D    |    1.00 (Fail)                        |
+      |     0 - 34     |    F    |    0.00 (Fail)                        |
+      |                |    X    |    Barred                             |
+      |                |    TL   |    Incomplete                         |
+      |                |   M/TM  |    Satisfactory/Not Satisfactory      |
+      |                |    TD   |    Withdraw                           |
+      |------------------------------------------------------------------|
+
+
+      ||--- SKIP1013 ---||
+
+        <> Subject     : Programming 1
+        <> Total mark  : 85
+
+      ||--- SKIK1013 ---||
+
+        <> Subject     : Computer Organizations and Architecture
+        <> Total mark  : 68
+
+      ||--- SCQM1013 ---||
+
+        <> Subject     : Mathematics for Computing
+        <> Total mark  : 87
+
+      ||--- SADN1033 ---||
+
+        <> Subject     : Kenegaraan
+        <> Total mark  : 87
+
+      ||--- MPU1013 ---||
+
+        <> Subject    : Penghayatan Etika dan Peradaban
+        <> Total mark : 74
+
+      ||--- MPU1043 ---||
+
+        <> Subject    : Falsafah dan Isu Semasa 
+        <> Total mark : 85
+
+      The grade point for 'Computer Organizations and Architecture' (SKIK1013) is 3.0
+      The grade point for 'Mathematics for Computing' (SCQM1013) is 4.0
+      The grade point for 'Kenegaraan' (SADN1033) is 4.0
+      The grade point for 'Penghayatan Etika dan Preadaban' (MPU1013) is 3.33
+      The grade point for 'Programming 1' (SKIP1013) is 4.0
+      The grade point for 'Falsafah dan Isu Semasa' (MPU1043) is 4.0
+
+      />> Total credit hours for Semester 1        : 18.0
+      />> Total grade points earned for Semester 1 : 66.99
+      />> GPA for Semester 1                       : 3.72
