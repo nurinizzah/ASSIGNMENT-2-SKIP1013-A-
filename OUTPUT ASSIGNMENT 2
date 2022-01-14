@@ -1,0 +1,96 @@
+_________________________________________________________________
+---------------[Welcome to UUM Salary Calculator]----------------
+_________________________________________________________________
+
+
+This program is to help new employees to calculate their salaries
+ which have been added and subtracted by various sectors such as
+ bonuses, taxes, EPF, SOCSO and so on
+
+_________________________________________________________________
+
+--------------------------[Section 1]----------------------------
+
+Please enter your name: 
+nurin izzah binti ishak
+Please enter your ID: 
+288063
+Please enter your NRIC (without (-)): 
+020415140514
+Please choose your job: 1. Accountant
+                        2. Bus Driver
+                        3. Cleaner
+(Please choose from 1-3): 
+2
+_________________________________________________________________
+
+-------------------------[ Bus Driver ]--------------------------
+
+Basic Salary: RM 1200.0
+The salary is not include with variable pay which is
+ petrol allowance and mobile allowance
+
+************************* Variable Pay **************************
+
+Your petrol allowance for this month is : 100.0
+Your mobile allowance for this month is: RM 50.0
+Variable pay: RM 150.0
+
+******************** Statutory Contribution *********************
+
+EPF Employee Contribution: RM 108.0
+Rate of contribution for Employees' Social Security
+ when wages exceed RM1200 but not RM1300: RM6.25
+Tax deduction: RM 120.0
+
+Your total statutory contribution: RM 234.25
+
+************************** Net Salary ***************************
+
+Your net salary for this month: RM 1115.75
+
+_________________________________________________________________
+
+Your job is not in the system.
+
+*****************************************************************
+Do you want to calculate your total saving? [Y/N]: 
+y
+
+Please enter your net salary for this month: RM 
+1115.75
+Please enter your house rent payment: RM 
+600
+Please enter your electricity bills: RM 
+32
+Please enter your water bills: RM 
+12
+Please enter your internet bills: RM 
+50
+Please enter your insurance payment: RM 
+50
+
+=================================================================
+Your saving for this month is: RM 371.75
+Your total saving is: RM 371.75
+=================================================================
+
+Please enter your net salary for this month: RM 
+1115.75
+Please enter your house rent payment: RM 
+600
+Please enter your electricity bills: RM 
+35
+Please enter your water bills: RM 
+19
+Please enter your internet bills: RM 
+50
+Please enter your insurance payment: RM 
+50
+
+=================================================================
+Your saving for this month is: RM 361.75
+Your total saving is: RM 733.50
+=================================================================
+
+Please enter your net salary for this month: RM 
