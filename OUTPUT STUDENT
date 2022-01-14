@@ -1,0 +1,74 @@
+===========================WELCOME TO MINI ACCOUNTANT CALCULATOR===========================
+This system is to help student to know how much money they had expense in a month
+Please fill in the blank for the requirement
+
+****************************************Section A******************************************
+Please enter your name = 
+AINUR
+Please enter your age = 
+20
+Please enter your matric number = 
+288091
+What is your current year studies = 
+2022
+Please enter your qualification level 
+(Input 1 for Diploma, 2 for FoundationDegree , 3 for BachelorsDegree, 4 for MasterDegree, 5 for PHD) = 
+3
+Bachelors Degree
+*******************************************************************************************
+
+****************************************Section B******************************************
+Please enter your allowance = RM
+3500
+Please enter your university fees = RM
+500
+Please enter your total meals expense in a day = RM
+20
+You had reach the limit
+===========================LAUNDRY CENTER PRICE LIST=========================================
+    Type Of Machine                 CODE                            PRICE                    
+      Washing Machine                01                               2.50                   
+      Dryer Machine                  02                               2.50                   
+      Both Machine                   03                               5.00                   
+Please enter what type of machine you want to use : 
+03
+You are using Washing Machine and Dryer Machine in a week
+The total laundry expense in week = RM5.0
+=======================DATA PLAN FOR THE TELEPHONE BILLS====================================
+           DAYS                     CODE                            PRICE                   
+            30                       00                               35                    
+             7                       55                               12                    
+             1                       22                                3                    
+Please choose your type of data plan in a month  = 
+00
+The total expense for telephone bills in a month = RM30
+============================The price list of books and stationaries========================
+                 ITEM                                     CODE                  PRICE        
+                 Book                        =              1                   RM2.50       
+               Test pad                      =              2                   RM3.00       
+                 Pen                         =              3                   RM0.80       
+            Correction Tape                  =              4                   RM4.00       
+Please enter your item by input the code  = 
+2
+Enter the quantity of the test pad : 
+3
+The total price for item  : RM9.0
+*******************************************************************************************
+
+****************************************Section C******************************************
+Your total amount in your account for each month is RM 583.33
+Please enter your total money added = RM
+900
+Your total amount in your account after adding your money added = RM 1483.33
+All the total expenses for you in a month is RM 1159.00
+======================================================================================
+Your total balance in your account after you finish settling all the expenses is RM 324.33
+Your total amount for saving in this month is RM 97.30
+***************************************************************************************
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
