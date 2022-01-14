@@ -1,0 +1,252 @@
+package selfProgramming;
+import java.util.Scanner;
+public class Asg2Salary {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int ID;
+		int client;
+		int job;
+		int choice;
+		String Name;
+		char ans;
+		double NRIC, salary;
+		double basicsalary = 1200;
+		double basicsalary1 = 1200;
+		double basicsalary2 = 1100;
+		double statutorycontribution;
+		double statutorycontribution1;
+		double statutorycontribution2;
+		double netsalary, variablepay;
+		double netsalary1, variablepay1;
+		double netsalary2, variablepay2;
+		double EPF, SOCSO, tax;
+		double EPF1, SOCSO1, tax1;
+		double EPF2, SOCSO2, tax2;
+		double petrolallowance, petrolallowance1;
+		double mobileallowance, mobileallowance1, mobileallowance2;
+		double rent, electricbills, waterbills, saving, totalsaving = 0;
+		double internetbills, creditcardbills, insurance;
+		
+		
+		Scanner input = new Scanner (System.in);
+		
+		System.out.println("_________________________________________________________________");
+		System.out.println("---------------[Welcome to UUM Salary Calculator]----------------");
+		System.out.println("_________________________________________________________________");
+		System.out.println();
+		System.out.println("\r\n"
+				+ "This program is to help new employees to calculate their salaries\n"
+				+ " which have been added and subtracted by various sectors such as\n"
+				+ " bonuses, taxes, EPF, SOCSO and so on");
+		System.out.println();
+		
+		System.out.println("_________________________________________________________________");
+		System.out.println();
+		
+		System.out.println("--------------------------[Section 1]----------------------------");
+		System.out.println();
+		
+		System.out.println("Please enter your name: ");
+		Name = input.nextLine();
+		
+		System.out.println("Please enter your ID: ");
+		ID = input.nextInt();
+		
+		System.out.println("Please enter your NRIC (without (-)): ");
+		NRIC = input.nextDouble();
+		
+		
+		
+			
+		System.out.println("Please choose your job: 1. Accountant"
+				+ "\r                        2. Bus Driver"
+				+ "\r                        3. Cleaner"
+				+ "\r(Please choose from 1-3): ");
+		job = input.nextInt();
+		
+		if (job==1) {
+		
+		System.out.println("_________________________________________________________________");
+		System.out.println();
+		System.out.println("-------------------------[ Accountant ]--------------------------");
+		System.out.println();
+		
+		System.out.println("Basic Salary: RM " +basicsalary);
+		System.out.println("The salary is not include with variable pay which is\n "
+						+ "petrol allowance and mobile allowance");
+		
+		System.out.println();
+		
+		System.out.println("************************* Variable Pay **************************");
+		System.out.println();
+		System.out.println("Your petrol allowance for this month is : ");
+		System.out.println("There is no provision of petrol allowance for accountant employees.");
+		mobileallowance = (50*1);
+		System.out.println("Your mobile allowance for this month is: RM " +mobileallowance);
+		variablepay = mobileallowance;
+		System.out.println("Variable pay: RM " +mobileallowance);
+		
+		System.out.println();
+		
+		System.out.println("******************** Statutory Contribution *********************");
+		System.out.println();
+		EPF = (basicsalary*0.09 );
+		System.out.println("EPF Employee Contribution: RM " +EPF);
+		SOCSO = 6.25;
+		System.out.println("Rate of contribution for Employees' Social Security\n "
+				+ "when wages exceed RM1200 but not RM1300: RM" +SOCSO);
+		tax = (basicsalary*0.1);
+		System.out.println("Tax deduction: RM " +tax);
+		System.out.println();
+		statutorycontribution = EPF+SOCSO+tax;
+		System.out.println("Your total statutory contribution: RM " +statutorycontribution);
+		
+		System.out.println();
+		
+		System.out.println("************************** Net Salary ***************************");
+		System.out.println();
+		netsalary = (basicsalary + variablepay) - (statutorycontribution);
+		System.out.println("Your net salary for this month: RM " +netsalary);
+		System.out.println();
+		System.out.println("_________________________________________________________________");
+		System.out.println();
+		}
+		
+		if (job == 2) {
+			
+		System.out.println("_________________________________________________________________");
+		System.out.println();
+		System.out.println("-------------------------[ Bus Driver ]--------------------------");
+		System.out.println();
+		
+		System.out.println("Basic Salary: RM " +basicsalary1);
+		System.out.println("The salary is not include with variable pay which is\n "
+						+ "petrol allowance and mobile allowance");
+		
+		System.out.println();
+		
+		System.out.println("************************* Variable Pay **************************");
+		System.out.println();
+		petrolallowance = (0.5*200);
+		System.out.println("Your petrol allowance for this month is : " +petrolallowance);
+		mobileallowance1 = (50*1);
+		System.out.println("Your mobile allowance for this month is: RM " +mobileallowance1);
+		variablepay1 = petrolallowance + mobileallowance1;
+		System.out.println("Variable pay: RM " +variablepay1);
+		
+		System.out.println();
+		
+		System.out.println("******************** Statutory Contribution *********************");
+		System.out.println();
+		EPF1 = (basicsalary1*0.09);
+		System.out.println("EPF Employee Contribution: RM " +EPF1);
+		SOCSO1 = 6.25;
+		System.out.println("Rate of contribution for Employees' Social Security\n "
+				+ "when wages exceed RM1200 but not RM1300: RM" +SOCSO1);
+		tax1 = (basicsalary1*0.1);
+		System.out.println("Tax deduction: RM " +tax1);
+		System.out.println();
+		statutorycontribution1 = EPF1+SOCSO1+tax1;
+		System.out.println("Your total statutory contribution: RM " +statutorycontribution1);
+		
+		System.out.println();
+		
+		System.out.println("************************** Net Salary ***************************");
+		System.out.println();
+		netsalary1 = (basicsalary1 + variablepay1) - (statutorycontribution1);
+		System.out.println("Your net salary for this month: RM " +netsalary1);
+		System.out.println();
+		System.out.println("_________________________________________________________________");
+		System.out.println();
+		}
+		
+		if (job == 3) {
+		
+		System.out.println("_________________________________________________________________");
+		System.out.println();
+		System.out.println("---------------------------[ Cleaner ]---------------------------");
+		System.out.println();
+		
+		System.out.println("Basic Salary: RM " +basicsalary2);
+		System.out.println("The salary is not include with variable pay which is\n "
+						+ "petrol allowance and mobile allowance");
+		
+		System.out.println();
+		
+		System.out.println("************************* Variable Pay **************************");
+		System.out.println();
+		/*UUM will only cover petrol allowances up to 200km only*/
+		petrolallowance1 = (0.5*200);
+		System.out.println("Your petrol allowance for this month is : " +petrolallowance1);
+		System.out.println("Your mobile allowance for this month is: ");
+		System.out.println("There is no provision of mobile allowance for cleaner employees.");
+		variablepay2 = petrolallowance1;
+		System.out.println("Variable pay: RM " +variablepay2);
+		
+		System.out.println();
+		
+		System.out.println("******************** Statutory Contribution *********************");
+		System.out.println();
+		EPF2 = (basicsalary2*0.09);
+		System.out.println("EPF Employee Contribution: RM " +EPF2);
+		SOCSO2 = 6.25;
+		System.out.println("Rate of contribution for Employees' Social Security\n "
+				+ "when wages exceed RM1200 but not RM1300: RM" +SOCSO2);
+		tax2 = (basicsalary2*0.1);
+		System.out.println("Tax deduction: RM " +tax2);
+		System.out.println();
+		statutorycontribution2 = EPF2+SOCSO2+tax2;
+		System.out.println("Your total statutory contribution: RM " +statutorycontribution2);
+		
+		System.out.println();
+		
+		System.out.println("************************** Net Salary ***************************");
+		System.out.println();
+		netsalary2 = (basicsalary2 + variablepay2) - (statutorycontribution2);
+		System.out.println("Your net salary for this month: RM " +netsalary2);
+		System.out.println();
+		System.out.println("_________________________________________________________________");
+		System.out.println();
+		}
+		
+		else 
+			System.out.println("Your job is not in the system.");
+		System.out.println();
+		System.out.println("*****************************************************************");
+		
+		
+		
+		System.out.println("Do you want to calculate your total saving? [Y/N]: ");
+		ans = input.next().charAt(0);
+		while (ans == 'Y' || ans == 'y') {
+		
+		System.out.println();
+		System.out.println("Please enter your net salary for this month: RM ");
+		salary = input.nextDouble();
+		System.out.println("Please enter your house rent payment: RM ");
+		rent = input.nextDouble();
+		System.out.println("Please enter your electricity bills: RM ");
+		electricbills = input.nextDouble();
+		System.out.println("Please enter your water bills: RM ");
+		waterbills = input.nextDouble();
+		System.out.println("Please enter your internet bills: RM ");
+		internetbills = input.nextDouble();
+		System.out.println("Please enter your insurance payment: RM ");
+		insurance = input.nextDouble();
+		System.out.println();
+		
+		System.out.println("=================================================================");
+		saving = salary - (rent + electricbills + waterbills + internetbills + insurance);
+		System.out.printf("Your saving for this month is: RM %.2f" ,saving);
+		
+		totalsaving=totalsaving+saving;
+		System.out.printf("\nYour total saving is: RM %.2f" ,totalsaving);
+		System.out.println();
+		System.out.println("=================================================================");
+		}
+		
+	}
+}
+
