@@ -1,0 +1,267 @@
+package Assignment2;
+
+import java.util.Scanner;
+
+public class UniversityStudent2 {
+
+	public static void main(String[] args) {
+		
+		String name;
+		int item;
+		int qualificationlevel;
+		int age;
+		int year;
+		int phoneNum;
+		int matricNum;
+		int Diploma = 1;
+		int FoundationDegree = 2;
+		int BachelorsDegree = 3;
+		int MasterDegree = 4;
+		int PHD = 5;
+		int i =1;
+		int book1 = 1;
+		int testpad1 = 2;
+		int pen1 = 3;
+		int correctiontape1 = 4;
+		int quantity;
+		int phoneBills;
+		int day30 = 00;
+		int day7 = 55;
+		int day1 = 22;
+		int day30Price = 30;
+		int day7Price = 12;
+		int day1Price = 3;
+		int DataPrice;
+		int MachineType;
+		double WashMachine = 2.50;
+		double DryMachine = 2.50;
+		double BothMachine = 5.00;
+ 		double itemPrice;
+		double book = 2.50;
+		double testpad = 3.00;
+		double pen = 0.80;
+		double correctiontape=4.00;
+		double totalamount;
+		double allowance;
+		double fees;
+		double mealsExpense;
+		double laundryExpense;
+		double totalAccount; //new
+		double totalNeeded;
+		double totalbalance;
+		double totaladded;
+		double totalsaving;
+		double totalAll;
+		double totalNewAdded=0;
+		double totalNewNeeded;
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("===========================WELCOME TO MINI ACCOUNTANT CALCULATOR===========================");
+		System.out.println("This system is to help student to know how much money they had expense in a month");
+		System.out.println("Please fill in the blank for the requirement");
+		System.out.println("");
+		
+		System.out.println("****************************************Section A******************************************");
+		System.out.println("Please enter your name = ");
+		name=scan.next();
+		System.out.println("Please enter your age = ");
+		age=scan.nextInt();
+		System.out.println("Please enter your matric number = ");
+		matricNum=scan.nextInt();
+		System.out.println("What is your current year studies = ");
+		year=scan.nextInt();
+		System.out.println("Please enter your qualification level " + "\n" + "(Input 1 for Diploma, 2 for FoundationDegree , 3 for BachelorsDegree, 4 for MasterDegree, 5 for PHD) = ");
+		qualificationlevel=scan.nextInt();
+		if(qualificationlevel==1)
+		{
+			System.out.println("Diploma");
+		}
+		else if(qualificationlevel==2)
+		{
+			System.out.println("Foundation Degree");
+		}
+		else if(qualificationlevel==3)
+		{
+			System.out.println("Bachelors Degree");
+		}
+		else if(qualificationlevel==4)
+		{
+			System.out.println("Master Degree");
+		}
+		else
+		{
+			System.out.println("PHD");
+		}
+		System.out.println("*******************************************************************************************");
+		System.out.println("");
+		
+		System.out.println("****************************************Section B******************************************");
+		System.out.println("Please enter your allowance = RM");
+		allowance=scan.nextDouble();
+		System.out.println("Please enter your university fees = RM");
+		fees=scan.nextDouble();
+		System.out.println("Please enter your total meals expense in a day = RM");
+		mealsExpense=scan.nextDouble();
+		{
+		if(mealsExpense==20)
+			System.out.println("You had reach the limit");
+		else
+		{
+			do
+			{
+				if(mealsExpense<=20)
+				{
+					System.out.println("Please enter another meals expense : RM");
+					mealsExpense=scan.nextDouble();
+				}
+				i++;
+			}
+			while(i<3);
+					System.out.println("You had over the limit");
+		}
+		System.out.println("===========================LAUNDRY CENTER PRICE LIST=========================================");
+		System.out.println("    Type Of Machine                 CODE                            PRICE                    ");
+		System.out.println("      Washing Machine                01                               2.50                   ");
+		System.out.println("      Dryer Machine                  02                               2.50                   ");
+		System.out.println("      Both Machine                   03                               5.00                   ");
+		System.out.println("Please enter what type of machine you want to use : ");
+		MachineType=scan.nextInt();
+		if(MachineType==01)
+		{
+			laundryExpense=WashMachine;
+			System.out.println("You are using Washing Machine only in a week");
+			System.out.println("The total laundry expense in week = RM" + laundryExpense);
+		}
+		if(MachineType==03)
+		{
+			laundryExpense=WashMachine + DryMachine;
+			System.out.println("You are using Washing Machine and Dryer Machine in a week");
+			System.out.println("The total laundry expense in week = RM" + laundryExpense);
+		}
+		else
+		{
+			laundryExpense = DryMachine;
+			System.out.println("You are using Dryer Machine only in a week");
+			System.out.println("The total laundry expense in week = RM" + laundryExpense);
+		}
+		System.out.println("=======================DATA PLAN FOR THE TELEPHONE BILLS====================================");
+		System.out.println("           DAYS                     CODE                            PRICE                   ");
+		System.out.println("            30                       00                               35                    ");
+		System.out.println("             7                       55                               12                    ");
+		System.out.println("             1                       22                                3                    ");
+		System.out.println("Please choose your type of data plan in a month  = ");
+		phoneBills=scan.nextInt();
+		if(phoneBills==00)
+		{
+			DataPrice = day30Price;
+			System.out.println("The total expense for telephone bills in a month = RM" + DataPrice);
+		}
+		else if(phoneBills==55)
+		{
+			DataPrice = day7Price*4;//4 weeks 
+			System.out.println("The total expense for telephone bills in a month = RM" + DataPrice);
+		}
+		else
+		{
+			DataPrice = day1Price*30; //30days
+			System.out.println("The total expense for telephone bills in a month = RM" + DataPrice);
+		}
+		System.out.println("============================The price list of books and stationaries========================");
+		System.out.println("                 ITEM                                     CODE                  PRICE        ");
+		System.out.println("                 Book                        =              1                   RM2.50       ");
+	    System.out.println("               Test pad                      =              2                   RM3.00       ");
+	    System.out.println("                 Pen                         =              3                   RM0.80       ");
+	    System.out.println("            Correction Tape                  =              4                   RM4.00       ");
+		System.out.println("Please enter your item by input the code  = ");
+		item=scan.nextInt();
+		if(item==1)
+		{
+			System.out.println("Enter the quantity of the books : ");
+			quantity=scan.nextInt();
+			itemPrice=quantity*book;
+			System.out.println("The total price for item  : RM" +itemPrice);
+			
+		}
+		else if(item==2)
+		{
+			System.out.println("Enter the quantity of the test pad : ");
+			quantity=scan.nextInt();
+			itemPrice=quantity*testpad;
+			System.out.println("The total price for item  : RM" +itemPrice);
+		}
+		else if(item==3)
+		{
+			System.out.println("Enter the quantity of the pen : ");
+			quantity=scan.nextInt();
+			itemPrice=quantity*pen;
+			System.out.printf("The total price for item  : RM %.2f	" ,itemPrice);
+			System.out.println("");
+		}
+		else
+		{
+			System.out.println("Enter the quantity of the correction tape : ");
+			quantity=scan.nextInt();
+			itemPrice=quantity*correctiontape;
+			System.out.println("The total price for item  : RM" +itemPrice);	
+		}
+
+		System.out.println("*******************************************************************************************");
+		System.out.println("");
+		
+		System.out.println("****************************************Section C******************************************");
+		totalamount=allowance/6;
+		System.out.printf("Your total amount in your account for each month is RM %.2f" , totalamount);
+		System.out.println("");
+		System.out.println("Please enter your total money added = RM");
+		totaladded=scan.nextDouble();
+		totalAccount=totalamount+totaladded; // new 
+		System.out.printf("Your total amount in your account after adding your money added = RM %.2f" , totalAccount);
+		System.out.println("");
+		totalAll=(fees+(mealsExpense*30)+(laundryExpense*4)+DataPrice+itemPrice);
+		System.out.printf("All the total expenses for you in a month is RM %.2f" , totalAll);
+		System.out.println("");
+		if (totalAll>=totalAccount)
+		{
+			System.out.println("======================================================================================");
+			System.out.println("You had not enough money !!!");
+			System.out.println("You cannot do any saving in this month");
+			totalNeeded=totalAll-totalAccount;
+			System.out.printf("To settle the expenses in this month, you need more money as much RM %.2f" , totalNeeded);
+			System.out.println("");
+			do 
+			{
+				if(totalNewAdded!=totalNeeded)
+				{
+					System.out.printf("Enter your new total money added : RM %.2f" , totalNewAdded);
+					totalNewAdded=scan.nextDouble();
+					System.out.println("");
+				}
+				i++;
+			}
+			while(i<3);
+			System.out.println("You cannot enter anymore");
+			System.out.println("You still dont have enough many");
+			totalNewNeeded=totalNeeded-totalNewAdded;
+			System.out.printf("The total money needed you still need to have is RM %.2f", totalNewNeeded );
+			System.out.println("");	
+			System.out.println("**************************************************************************************");
+			
+		
+		}
+		else
+		{
+			System.out.println("======================================================================================");
+			totalbalance=totalAccount-totalAll;
+			System.out.printf("Your total balance in your account after you finish settling all the expenses is RM %.2f" , totalbalance);
+			System.out.println("");
+			totalsaving=(30*totalbalance)/100;
+			System.out.printf("Your total amount for saving in this month is RM %.2f" , totalsaving);
+			System.out.println("");
+			System.out.println("***************************************************************************************");
+		}
+		}
+	}
+}
+
+	
